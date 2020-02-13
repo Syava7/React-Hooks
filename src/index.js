@@ -5,13 +5,16 @@ import App from './App'
 
 import { BrowserRouter as Router } from 'react-router-dom'
 import { CurrentUserProvider } from './contexts/currentUser'
+import CurrentUserChecker from './Components/CurrentUserChecker'
 
 
 ReactDOM.render(
   <CurrentUserProvider>
-    <Router>
-      <App />
-    </Router>
+    <CurrentUserChecker>
+      <Router>
+        <App />
+      </Router>
+    </CurrentUserChecker>
   </CurrentUserProvider>
     , document.getElementById('root'));
 
